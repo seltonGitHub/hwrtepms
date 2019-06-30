@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--引入DTD约束-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itszt.elec.dao.DevicePlanDao">
+
+    <select id="querAllplans" resultType="com.itszt.elec.domain.ElecDevicePlan">
+
+        SELECT
+         <trim suffixOverrides=",">
+
+             <if test='JctID!=null'>
+                 JctID,
+             </if>
+             <if test='DevName!=null'>
+                 DevName,
+             </if>
+             <if test='SpecType!=null'>
+                 SpecType,
+             </if>
+             <if test='ProduceHome!=null'>
+                 ProduceHome,
+             </if>
+             <if test='Quality!=null'>
+                 Quality,
+             </if>
+             <if test='PlanDate!=null'>
+                 PlanDate,
+             </if>
+             <if test='DevExpense!=null'>
+                 DevExpense,
+             </if>
+             <if test='UseUnit!=null'>
+                 UseUnit,
+             </if>
+         </trim>
+       FROM elec_device_plan;
+    </select>
+
+
+    <select id="querAllplans2"  resultType="com.itszt.elec.domain.ElecDevicePlan">
+        SELECT
+        <foreach collection="dbNames" item="dbname" separator="," open=" " close=" ">
+            ${dbname}
+        </foreach>
+
+        FROM elec_device_plan;
+    </select>
+
+    <select id="queryPlansByCondition" resultType="com.itszt.elec.domain.ElecDevicePlan">
+        SELECT * FROM elec_device_plan
+        <where>
+
+            <if test='jctId!=null and jctId!=""'>
+                AND jctId=#{jctId}
+            </if>
+
+            <if test='devName!=null and devName!=""'>
+                AND devName=#{devName}
+            </if>
+
+            <if test='devType!=null and devType!=""'>
+                AND devType=#{devType}
+            </if>
+
+            <if test='planDatef!=null and planDatef!="" and planDatet!=null and planDatet!=""'>
+                AND PlanDate BETWEEN #{planDatef} AND #{planDatet}
+            </if>
+        </where>
+
+          limit #{start},#{num}
+    </select>
+
+    <select id="queryPlansByConditionCount" resultType="Integer">
+        SELECT COUNT(*) FROM elec_device_plan
+        <where>
+
+            <if test='jctId!=null and jctId!=""'>
+                AND jctId=#{jctId}
+            </if>
+
+            <if test='devName!=null and devName!=""'>
+                AND devName=#{devName}
+            </if>
+
+            <if test='devType!=null and devType!=""'>
+                AND devType=#{devType}
+            </if>
+
+            <if test='planDatef!=null and planDatef!="" and planDatet!=null and planDatet!=""'>
+                AND PlanDate BETWEEN #{planDatef} AND #{planDatet}
+            </if>
+        </where>
+
+    </select>
+</mapper>
