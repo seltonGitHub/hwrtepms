@@ -7,9 +7,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-/**
- * Created by Administrator--善知  on 2018/6/17.
- */
 public interface DataCharService {
     //1.列出全部所属单位
     public List<ElecSystemddl> showAllProjIDs();

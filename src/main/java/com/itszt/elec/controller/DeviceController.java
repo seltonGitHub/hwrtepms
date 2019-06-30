@@ -27,7 +27,6 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by Administrator--善知  on 2018/6/15.
  */
 @Controller
 @RequestMapping("device")

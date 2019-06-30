@@ -8,13 +8,11 @@ import java.util.List;
 import java.util.TreeSet;
 
 /**
- * Created by Administrator--善知  on 2018/5/20.
  */
 @Repository
 public interface PopedomDao {
     @Select("select * from elec_popedom")
     public TreeSet<ElecPopedom> queryAllPopedoms();
-
 
     @Select("SELECT ep.*,erp.* FROM elec_popedom ep  INNER JOIN elec_role_popedom erp ON ep.MID=erp.mid where erp.roleID=#{roleID}")
     public TreeSet<ElecPopedom> queryRolePopedoms(String roleID);
