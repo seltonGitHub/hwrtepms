@@ -134,9 +134,7 @@ ${param.belongTo} <----> ${belongTo}
 			<%--<%--%>
 				<%--}--%>
 			<%--%>--%>
-			<hehe:checkP  pope="mb">
-				<input  id="BT_Add" type="button" value="添加" name="BT_Add" style="font-size:12px; color:black; height=20;width=50"   onclick="openWindow('/dataChart/dataChartAdd.html',800,400);">
-			</hehe:checkP>
+			<input  id="BT_Add" type="button" value="添加" name="BT_Add" style="font-size:12px; color:black; height=20;width=50"   onclick="openWindow('/dataChart/dataChartAdd.html',800,400);">
 		</td>
 	</TR>
   </TABLE>		
