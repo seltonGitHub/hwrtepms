@@ -11,18 +11,18 @@ import java.util.TreeSet;
 /**
  */
 public interface RoleService {
-    public List<ElecRole> showAllRoles();
+    List<ElecRole> showAllRoles();
 
-    public TreeSet<ElecPopedom> showAllPopedoms();
+    TreeSet<ElecPopedom> showAllPopedoms();
 
-    public TreeSet<ElecPopedom> showRolePopedoms(String roleID);
+    TreeSet<ElecPopedom> showRolePopedoms(String roleID);
 
-    public TreeSet<ElecUser> showRoleUsers(String roleID);
+    TreeSet<ElecUser> showRoleUsers(String roleID);
 
-    public boolean modifyRoleDatas(String roleID,String[] selectoper,String[] selectuser);
+    boolean modifyRoleDatas(String roleID,String[] selectoper,String[] selectuser);
 
-    public List<MenuItemBean> showLeftMenuBeans(TreeSet<ElecPopedom> elecPopedomsNow);
+    List<MenuItemBean> showLeftMenuBeans(TreeSet<ElecPopedom> elecPopedomsNow);
 
-    public void setPopedomUrl(TreeSet<ElecPopedom> elecPopedomsNow,List<ElecRole> elecRoles);
+    void setPopedomUrl(TreeSet<ElecPopedom> elecPopedomsNow,List<ElecRole> elecRoles);
 
 }

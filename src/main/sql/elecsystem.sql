@@ -425,7 +425,7 @@ INSERT INTO `elec_popedom` VALUES ('ak', '0', '监测台建筑管理', '', '../i
 INSERT INTO `elec_popedom` VALUES ('al', 'ak', '监测台建筑管理', '', '../images/MenuIcon/jiancetaijianzhu.gif', 'mainFrame', '0', '1');
 INSERT INTO `elec_popedom` VALUES ('am', '0', '系统管理', '', '../images/MenuIcon/xitongguanli.gif', '', '1', '1');
 INSERT INTO `elec_popedom` VALUES ('an', 'am', '用户管理', '../system/elecUserAction_home.do', '../images/MenuIcon/yonghuguanli.gif', 'mainFrame', '0', '1');
-INSERT INTO `elec_popedom` VALUES ('ao', 'am', '角色管理', '/menu/roleIndex.html', '../images/MenuIcon/jueseguanli.gif', 'mainFrame', '0', '1');
+INSERT INTO `elec_popedom` VALUES ('ao', 'am', '角色管理', '/role/roleIndex.html', '../images/MenuIcon/jueseguanli.gif', 'mainFrame', '0', '1');
 INSERT INTO `elec_popedom` VALUES ('ap', 'am', '运行监控', '../system/elecCommonMsgAction_home.do', '../images/MenuIcon/daibanshiyi.gif', 'mainFrame', '0', '1');
 INSERT INTO `elec_popedom` VALUES ('aq', 'am', '数据字典维护', '/menu/dictionaryIndex.html', '../images/MenuIcon/shujuzidianguanli.gif', 'mainFrame', '0', '1');
 INSERT INTO `elec_popedom` VALUES ('ar', '0', '审批流转', '', '../images/MenuIcon/shenpiliuzhuanguanli.gif', '', '1', '1');
