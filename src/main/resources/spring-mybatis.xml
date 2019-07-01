@@ -24,14 +24,14 @@
      <bean name="sqlSessionFactory" id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
           <property name="dataSource" ref="id_ds_c3p0"></property>
           <property name="configLocation" value="classpath:mybatis-config.xml"></property>
-          <property name="typeAliasesPackage" value="com.itszt.DDDR.domain"></property>
+          <property name="typeAliasesPackage" value="com.hwrt.DDDR.domain"></property>
      </bean>
      <!--有了这个配置，我们就指明了我们的Mapper们，即Dao们，都在哪个包
           也能使用注解了
            同时不用写Dao的实现类了
      -->
      <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-          <property name="basePackage" value="com.itszt.elec.dao"></property>
+          <property name="basePackage" value="com.hwrt.elec.dao"></property>
           <property name="sqlSessionFactoryBeanName"  value="sqlSessionFactory"></property>
      </bean>
 

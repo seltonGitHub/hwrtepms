@@ -30,7 +30,7 @@
      <!--指明注解的扫描包，即将来去哪个包里找注解
      SpringIoC只管扫描service和dao即可
      -->
-     <context:component-scan base-package="com.itszt.elec.service,com.itszt.elec.dao">
+     <context:component-scan base-package="com.hwrt.elec.service,com.hwrt.elec.dao">
      </context:component-scan>
 
 
