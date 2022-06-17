@@ -24,7 +24,7 @@
         <jedis.version>2.9.0</jedis.version>
         <aspectj.version>1.8.13</aspectj.version>
         <cglib.version>2.2.2</cglib.version>
-        <fastjson.version>1.2.31</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <jstl.version>1.2</jstl.version>
         <taglib.version>1.1.2</taglib.version>
         <SolrJ.version>4.10.1</SolrJ.version>
